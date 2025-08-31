@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Health Assistant</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-container">
-    <!-- Sidebar -->
-    <aside class="sidebar glass">
-      <h2 class="logo">AI Health Assistant</h2>
-      <button id="newChat" class="btn">+ New Chat</button>
-      <div class="history" id="chatHistory"></div>
-      <div class="profile">
-        <img src="https://ui-avatars.com/api/?name=User" alt="Profile" />
-        <span>User</span>
-      </div>
+  <div id="app">
+    <aside class="sidebar">
+      <h2>AI Health Assistant</h2>
+      <button id="new-chat">+ New Chat</button>
     </aside>
 
-    <!-- Chat area -->
-    <main class="chat-area glass">
-      <div id="chatWindow" class="chat-window"></div>
-      <form id="chatForm" class="chat-input">
-        <input
-          type="text"
-          id="userInput"
-          placeholder="Type your message..."
-          autocomplete="off"
-          required
-        />
-        <button type="submit" class="btn">Send</button>
-      </form>
+    <main class="chat-container">
+      <div id="chat"></div>
+      <div class="input-container">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send">Send</button>
+      </div>
     </main>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
